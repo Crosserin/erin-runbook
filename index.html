@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Runbook · Q Branch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap">
+<style>
+  :root { --bg:#0a0a0a; --ink:#e8e5de; --dim:#8a857c; --faint:#3a3632; --brass:#b8a47e; --danger:#c4342a; --rule:#1f1c18; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html,body { min-height:100%; }
+  body {
+    background: var(--bg) repeating-linear-gradient(0deg, transparent 0 99px, rgba(184,164,126,0.025) 99px 100px);
+    color: var(--ink); font-family:'Inter',sans-serif;
+    display:flex; flex-direction:column; min-height:100vh;
+    -webkit-font-smoothing:antialiased;
+  }
+  body::before { content:''; position:fixed; inset:0; z-index:0; pointer-events:none;
+    background: radial-gradient(ellipse 70% 40% at 50% 30%, rgba(184,164,126,0.05), transparent 70%); }
+  .stamp { position:fixed; top:28px; right:28px; z-index:3;
+    font-family:'Playfair Display',serif; font-weight:700; font-size:10px; letter-spacing:0.3em;
+    color:var(--danger); border:2px solid var(--danger); padding:6px 12px;
+    transform:rotate(8deg); opacity:0.85; }
+  nav { padding:24px 40px; display:flex; justify-content:space-between; position:relative; z-index:2;
+    font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.2em; text-transform:uppercase; color:var(--faint); }
+  nav .brand { color:var(--brass); }
+  main { flex:1; max-width:720px; width:100%; margin:0 auto; padding:80px 40px; position:relative; z-index:2; }
+  .file-id { font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.3em; color:var(--brass); margin-bottom:36px; }
+  h1 { font-family:'Playfair Display',serif; font-weight:400; font-size:clamp(56px,9vw,104px); line-height:0.95; margin-bottom:6px; }
+  h1 em { font-style:italic; }
+  .underline { display:block; width:72px; height:2px; background:var(--brass); margin:22px 0 24px; }
+  .subtitle { font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:var(--dim); margin-bottom:36px; }
+  .brief { font-size:16px; line-height:1.75; color:var(--ink); max-width:520px; margin-bottom:22px; }
+  .brief em { color:var(--brass); font-style:italic; }
+  .meta { font-family:'JetBrains Mono',monospace; font-size:10.5px; letter-spacing:0.12em; color:var(--faint); margin-top:44px; padding-top:20px; border-top:1px solid var(--rule); }
+  .meta span { color:var(--dim); }
+  footer { padding:22px 40px; display:flex; justify-content:space-between; position:relative; z-index:2;
+    font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:var(--faint); }
+  footer a { color:var(--faint); text-decoration:none; }
+  footer a:hover { color:var(--brass); }
+  @media (max-width:640px) { .stamp { top:16px; right:16px; font-size:9px; } nav,footer { padding:16px 20px; } main { padding:60px 24px; } }
+</style>
+</head>
+<body>
+  <div class="stamp">For your eyes only</div>
+  <nav><span class="brand">Q BRANCH · Records Division</span><span>dossier: pending</span></nav>
+  <main>
+    <div class="file-id">FILE · 0001 · RUNBOOK</div>
+    <h1>The <em>Runbook</em>.</h1>
+    <div class="underline"></div>
+    <div class="subtitle">Mission-critical procedures · Hardware reference</div>
+    <p class="brief">Every homelab has failure modes. Every operator forgets the fix at 2AM. This is the cure — a searchable dossier of <em>every</em> procedure that keeps the rack humming, written for the future-you who'll need it when something breaks.</p>
+    <p class="brief">Construction in progress. Dossier indexing begins shortly.</p>
+    <div class="meta">RESOURCE: <span>github.com/Crosserin/erin-runbook-data</span> · ACCESS: <span>authorized personnel only</span></div>
+  </main>
+  <footer>
+    <span>Erin Cross · X = Consulting</span>
+    <a href="https://cf-examples.pages.dev">← back to portfolio</a>
+  </footer>
+</body>
+</html>
