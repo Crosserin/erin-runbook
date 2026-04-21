@@ -1,28 +1,44 @@
-# erin-runbook
+# 🕴️ erin-runbook
 
-> **Runbook** — Q Branch Records Division
+> **Q BRANCH · Records Division**
 >
-> *"For your eyes only. Also your hands, when something breaks at 2AM."*
+> *"For your eyes only. Also your hands — when something breaks at 2AM and your first thought is 'I wrote this down somewhere, right?'"*
 
-**📡 Live dossier → [erin-runbook.pages.dev](https://erin-runbook.pages.dev)**
+🔴 **DOSSIER:** [`LIVE`](https://erin-runbook.pages.dev) · 🟢 **CLEARANCE:** operator-only · 📡 **TRANSMISSION:** fresh
 
 ---
 
-A searchable archive of every procedure that keeps my homelab — and the occasional client engagement — from catching fire. Because the operator who built the thing is not the same operator who needs to fix the thing at 3AM with one hand and a cup of coffee that went cold an hour ago.
+## 🎯 The mission
 
-Everything is markdown. Everything is indexed. Everything is one grep away from saving your sleep.
+Every homelab has failure modes. Every operator forgets the fix at 2AM. This is the cure — a searchable archive of every procedure that keeps the rack humming, written for the future-me who'll need it when DNS is suddenly pointing at a VPN that expired six months ago and the kids' Disney+ stopped working.
 
-## Operation brief
+Because the operator who **built** a thing is not the same operator who has to **fix** it at 3AM with one hand, a cup of cold coffee, and a child standing in the doorway asking why *Bluey* is "broken."
 
-- **UI repo** (this, public): the themed reader
-- **Data dossier** (private, [`erin-runbook-data`](https://github.com/Crosserin/erin-runbook-data)): the actual procedures
-- **Stack**: Cloudflare Pages + Pages Function proxying the GitHub API
+## 🗂️ The file system
 
-## Clearance
+| Asset | Visibility | Purpose |
+|---|---|---|
+| 🌐 `erin-runbook` (this) | Public | The themed reader |
+| 🔒 `erin-runbook-data` | Private | The actual procedures |
+| ⚡ Cloudflare Pages | Public | Runtime |
+| 🔑 PAT → CF secret | Edge-only | Proxy authorization |
 
-Everything on the viewer side is public. Everything with operational value is not. Access to the dossier is restricted to authorized personnel (one).
+## 🧰 Stack
 
-## Related ops
+- 🔥 Cloudflare Pages — static + Pages Functions
+- 📝 GitHub Contents API — markdown as the database
+- ⚙️ GitHub Actions — auto-deploy every push to `main`
+- 🎭 Zero frameworks. Zero build step. Zero patience for 2AM debugging.
 
-- 🌐 [xconsultingwork.com](https://xconsultingwork.com) — how I make rent
-- 🧪 [cf-examples](https://cf-examples.pages.dev) — what I build when no one's watching
+## 🤐 Clearance
+
+Viewer-side: public. Dossier content: *not.* If you can read the actual procedures, we need to have a conversation.
+
+## 🌐 Related ops
+
+- 🏢 [xconsultingwork.com](https://xconsultingwork.com) — how rent happens
+- 🧪 [cf-examples.pages.dev](https://cf-examples.pages.dev) — what I build when nobody's paying me to
+
+---
+
+*🍸 Shaken, not AGPL-ed. UI is MIT. Dossier is operator-proprietary.*
